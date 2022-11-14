@@ -8,6 +8,7 @@ using namespace std;
 //Estructuras
 typedef struct {
     string id;
+    string dni;
     string nombre;
     string apellido;
     string telefono;
@@ -20,7 +21,7 @@ typedef struct {
     string nombre;
     string apellido;
     string sexo;
-    tm nacimiento;  // DD/MM/YY
+    string nacimiento;  // DD/MM/YY
     string estado;
     string id_os;
     string telefono;
@@ -36,8 +37,8 @@ typedef struct {
 
 typedef struct {
     string dni_paciente;
-    tm fecha_solicitado;
-    tm fecha_turno;   // DD/MM/YY
+    string fecha_solicitado;
+    string fecha_turno;   // DD/MM/YY
     bool presento;
     string id_medico;
 } t_consulta;

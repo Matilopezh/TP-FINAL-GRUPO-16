@@ -18,7 +18,7 @@ void agregar_paciente(t_paciente*& Lista, t_paciente Nuevo, int* tamactual) {
 
 	return;
 }
-void agregar_medico(t_medico*&, int* tamPLista, t_medico Nuevo, int* tamactual) {
+void agregar_medico(t_medico*& Lista, t_medico Nuevo, int* tamactual) {
 	*tamactual = *tamactual + 1;
 	int i = 0;
 	t_medico* aux = new t_medico[*tamactual];
@@ -92,7 +92,7 @@ void FiltrarMedicoRep(t_medico*& Lista, int* tamM) {
 			}
 		}
 	}
-	t_paciente paciente_aux;
+	t_medico paciente_aux;
 	for (i = 0; i < *tamM - 1; i++) {
 		if (Lista[i].dni == "repetido") {
 			for (j = i; j < *tamM - 1; j++) {      //ordeno los repetidos al final 
