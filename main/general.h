@@ -1,14 +1,15 @@
 #pragma once
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <string.h>
 #include <ctime>
+#include <sstream>
 using namespace std;
 
 //Estructuras
 typedef struct {
     string id;
-    string dni;
     string nombre;
     string apellido;
     string telefono;
@@ -22,13 +23,21 @@ typedef struct {
     string apellido;
     string sexo;
     string nacimiento;  // DD/MM/YY
-    string estado;
+    string estado;    //fallecido , internado ,n/c
     string id_os;
-    string telefono;
-    string celular;
-    string direccion;
-    string mail;
-} t_paciente;
+  } t_paciente;
+
+typedef struct {
+    string nombre;
+    string apellido; 
+    string numero;// DD/MM/YY   //fallecido , internado ,n/c
+    string id_os;
+    string nombre_medico;
+    string apellido_medico;
+    string id_medico;
+    string especialidad_medico;
+} t_pacienteV;
+
 
 typedef struct {
     string id;
@@ -42,4 +51,12 @@ typedef struct {
     bool presento;
     string id_medico;
 } t_consulta;
+
+typedef struct {
+    string dni_paciente;
+    string telefono;
+    string celular;
+    string direccion;
+    string mail;
+} t_contacto;
 
